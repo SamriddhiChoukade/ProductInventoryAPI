@@ -1,51 +1,55 @@
+# 🛒 Product Inventory API (ASP.NET Core Web API + EF Core + SQLite)
 
-# TypeScript
+This is a simple **RESTful API** built with **ASP.NET Core Web API** and **Entity Framework Core** to manage products in an inventory.
 
-[![GitHub Actions CI](https://github.com/microsoft/TypeScript/workflows/CI/badge.svg)](https://github.com/microsoft/TypeScript/actions?query=workflow%3ACI)
-[![Devops Build Status](https://dev.azure.com/typescript/TypeScript/_apis/build/status/Typescript/node10)](https://dev.azure.com/typescript/TypeScript/_build?definitionId=7)
-[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/typescript)
-[![Downloads](https://img.shields.io/npm/dm/typescript.svg)](https://www.npmjs.com/package/typescript)
 
-[TypeScript](https://www.typescriptlang.org/) is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. Try it out at the [playground](https://www.typescriptlang.org/play/), and stay up to date via [our blog](https://blogs.msdn.microsoft.com/typescript) and [Twitter account](https://twitter.com/typescript).
+## 🚀 Features
+- Add new product (Name, Description, Price, StockQuantity, Category)
+- Get all products (with optional filter by category & sort by price)
+- Get product by ID
+- Update product details (price, stock, etc.)
+- Soft Delete / Toggle Active-Inactive (instead of permanent delete)
+- Low-stock alert (stock < 5)
 
-Find others who are using TypeScript at [our community page](https://www.typescriptlang.org/community/).
 
-## Installing
+## 🛠 Tech Stack
+- **Backend Framework:** ASP.NET Core Web API  
+- **ORM:** Entity Framework Core  
+- **Database:** SQLite (`products.db`)  
+- **Language:** C#  
 
-For the latest stable version:
 
+## 📂 Project Structure
+ProductInventoryAPI/
+├── Controllers/ --> ProductsController.cs (API endpoints)
+├── Models/ --> Product.cs (Entity class)
+├── Data/ --> AppDbContext.cs (EF Core DbContext)
+├── Program.cs --> App startup & middleware
+├── appsettings.json --> Database connection string
+└── products.db --> SQLite database file (auto-created)
+
+
+
+## 🔧 Setup Instructions
+
+### 1️⃣ Clone the Repository
+First clone this repo from GitHub:
 ```bash
-npm install -g typescript
-```
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>/ProductInventoryAPI
 
-For our nightly builds:
+###Install Dependencies
 
-```bash
-npm install -g typescript@next
-```
+Restore NuGet packages:
 
-## Contribute
+dotnet restore
 
-There are many ways to [contribute](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) to TypeScript.
-* [Submit bugs](https://github.com/microsoft/TypeScript/issues) and help us verify fixes as they are checked in.
-* Review the [source code changes](https://github.com/microsoft/TypeScript/pulls).
-* Engage with other TypeScript users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/typescript).
-* Help each other in the [TypeScript Community Discord](https://discord.gg/typescript).
-* Join the [#typescript](https://twitter.com/search?q=%23TypeScript) discussion on Twitter.
-* [Contribute bug fixes](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md).
-* Read the archived language specification ([docx](https://github.com/microsoft/TypeScript/blob/main/doc/TypeScript%20Language%20Specification%20-%20ARCHIVED.docx?raw=true),
- [pdf](https://github.com/microsoft/TypeScript/blob/main/doc/TypeScript%20Language%20Specification%20-%20ARCHIVED.pdf?raw=true), [md](https://github.com/microsoft/TypeScript/blob/main/doc/spec-ARCHIVED.md)).
+###database
+dotnet ef database update
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see
-the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
-with any additional questions or comments.
+###Run the API
 
-## Documentation
+Start the project:
 
-*  [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-*  [Programming handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-*  [Homepage](https://www.typescriptlang.org/)
+dotnet run
 
-## Roadmap
-
-For details on our planned features and future direction please refer to our [roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap).
