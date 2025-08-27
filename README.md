@@ -1,4 +1,4 @@
-# 🛒 Product Inventory API (ASP.NET Core Web API + EF Core + SQLite)
+# 🛒 Product Inventory API 
 
 This is a simple **RESTful API** built with **ASP.NET Core Web API** and **Entity Framework Core** to manage products in an inventory.
 
@@ -16,7 +16,7 @@ This is a simple **RESTful API** built with **ASP.NET Core Web API** and **Entit
 - **Backend Framework:** ASP.NET Core Web API  
 - **ORM:** Entity Framework Core  
 - **Database:** SQLite (`products.db`)  
-- **Language:** C#  
+ 
 
 
 ## 📂 Project Structure
@@ -60,6 +60,7 @@ dotnet run
 <img width="1868" height="847" alt="Screenshot 2025-08-27 155846" src="https://github.com/user-attachments/assets/909fd74c-da6f-4819-8cf0-d52edb3656cb" />
 
 <img width="1837" height="732" alt="image" src="https://github.com/user-attachments/assets/4af09a57-9612-41b3-b434-086e6398779b" />
+
 
 
 
